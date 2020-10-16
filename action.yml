@@ -1,0 +1,13 @@
+name: 'csv-json-flag-keeper'
+description: 'Keep your summary sheet'
+author: 'seed-of-apricot <seed.of.apricot@dev.chronolapselibrary.net>'
+branding:
+  icon: align-left
+  color: orange
+inputs:
+  GITHUB_TOKEN:
+    required: true
+    description: 'github token'
+runs:
+  using: 'node12'
+  main: 'dist/index.js'
