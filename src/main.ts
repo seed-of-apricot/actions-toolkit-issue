@@ -16,6 +16,15 @@ const main = async (): Promise<void> => {
     ).data.download_url;
 
     console.log(url);
+
+    const url_lfs = (
+      await client.repos.getContent({
+        ...github.context.repo,
+        path: 'issue_lfs.txt',
+      })
+    ).data.download_url;
+
+    console.log(url_lfs);
   } catch (error) {
     console.log(error);
     core.setFailed(error.message);
