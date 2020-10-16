@@ -12,7 +12,7 @@ const main = async (): Promise<void> => {
       await client.repos.getContent({
         ...github.context.repo,
         path: 'issue.txt',
-        ref: github.context.ref,
+        ref: 'main',
       })
     ).data.download_url;
 
@@ -22,7 +22,7 @@ const main = async (): Promise<void> => {
       await client.repos.getContent({
         ...github.context.repo,
         path: 'issue_lfs.txt',
-        ref: github.context.ref,
+        ref: 'main',
       })
     ).data.download_url;
 
