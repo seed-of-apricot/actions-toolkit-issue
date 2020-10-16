@@ -39,6 +39,11 @@ const main = async () => {
             path: 'issue.txt',
         })).data.download_url;
         console.log(url);
+        const url_lfs = (await client.repos.getContent({
+            ...github.context.repo,
+            path: 'issue_lfs.txt',
+        })).data.download_url;
+        console.log(url_lfs);
     }
     catch (error) {
         console.log(error);
