@@ -37,11 +37,13 @@ const main = async () => {
         const url = (await client.repos.getContent({
             ...github.context.repo,
             path: 'issue.txt',
+            ref: github.context.ref,
         })).data.download_url;
         console.log(url);
         const url_lfs = (await client.repos.getContent({
             ...github.context.repo,
             path: 'issue_lfs.txt',
+            ref: github.context.ref,
         })).data.download_url;
         console.log(url_lfs);
     }
